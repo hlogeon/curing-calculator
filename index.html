@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAxklEQVR4AZ3DwQkAMAhDURiA0WxG4Aew9kZIAbM+u8DMi2gMaOsGsAzcCYQdFkLMFzCCYAFKSm1gpqROzjg1uP2aE9dWbUglXQAAAABJRU5ErkJggg=="
+    />
+    <title>Калькулятор посола</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo" />
+      <h1>Калькулятор посола</h1>
+    </header>
+
+    <div class="form-container">
+      <div id="formio"></div>
+    </div>
+
+    <div class="result-container">
+      <h2>Результаты</h2>
+      <div id="results"></div>
+    </div>
+
+    <div class="content">
+      <div class="subtitle">Информация</div>
+      <p>
+        Этот калькулятор позволяет рассчитать необходимое количество соли,
+        сахара, специй и нитритной соли для вашего сухого посола. При вводе веса
+        мяса и других параметров, калькулятор автоматически производит расчеты и
+        выдает финальные результаты.
+      </p>
+      <p>
+        Для определения времени посола, калькулятор использует диаметр куска
+        мяса. Чем больше диаметр, тем больше времени требуется для полного
+        просоления мяса. Это позволяет гарантировать, что ваше мясо будет
+        просолено равномерно и безопасно для употребления.
+      </p>
+      <p>
+        Кроме того, этот калькулятор позволяет вам указать желаемое содержание
+        нитрита натрия в вашем готовом продукте в частях на миллион (ppm).
+        Нитрит натрия добавляется в посолочную смесь для обеспечения длительного
+        хранения и сохранения цвета и вкуса мяса. Рекомендуемые значения ppm
+        могут варьироваться в зависимости от типа продукта и предпочтений.
+      </p>
+      <p>
+        Пожалуйста, убедитесь, что вы внимательно следуете рекомендациям
+        калькулятора и соблюдаете все необходимые меры безопасности при
+        обработке мяса.
+      </p>
+    </div>
+
+    <footer>
+      <div>ИП Дегтярук А.В</div>
+      <div>
+        telegram:
+        <a href="https://t.me/hlogeon" target="_blank">t.me/hlogeon</a>
+      </div>
+      <div>© 2024</div>
+    </footer>
+
+    <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
