@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -9,11 +10,11 @@
       href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAxklEQVR4AZ3DwQkAMAhDURiA0WxG4Aew9kZIAbM+u8DMi2gMaOsGsAzcCYQdFkLMFzCCYAFKSm1gpqROzjg1uP2aE9dWbUglXQAAAABJRU5ErkJggg=="
     />
     <title>Калькулятор посола</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <header>
-      <img src="logo.png" alt="Logo" />
+      <img src="src/logo_meat512.png" alt="Logo" />
       <h1>Калькулятор посола</h1>
     </header>
 
@@ -63,7 +64,24 @@
       <div>© 2024</div>
     </footer>
 
-    <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
-    <script src="script.js"></script>
+    <script src="src/formio.full.min.js"></script>
+    <script src="src/script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("src/sw.js").then(
+            function (registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>
