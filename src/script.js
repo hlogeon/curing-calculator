@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         type: "number",
-        label: "Требуемый PPM нитрита натрия в итоговом продукте",
+        label: "Желаемый PPM нитрита натрия в продукте",
         key: "ppm",
         defaultValue: 150,
         input: true,
