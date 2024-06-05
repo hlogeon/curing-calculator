@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         type: "button",
-        action: "submit",
+        action: "event",
         label: "Вычислить",
         theme: "primary",
       },
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   Formio.createForm(formElement, formSchema).then(function (form) {
-    form.on("submit", function (submission) {
+    form.on("customEvent", function (submission) {
       const data = submission.data;
       console.log("Data: ", data);
       const weight = parseFloat(data.weight);
