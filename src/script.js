@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         1.25 * (data.diameter / 2.54) * (data.diameter / 2.54)
       );
 
-      saltGrams = saltGrams - nitriteGrams;
+      saltGrams = saltGrams - nitriteGrams > 0 ? saltGrams - nitriteGrams : 0;
       const resultsHtml = `Нитритная соль(г): ${nitriteGrams.toFixed(2)}<br>
                                Поваренная/Морская соль(г): ${saltGrams.toFixed(
                                  2
